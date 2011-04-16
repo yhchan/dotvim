@@ -58,6 +58,10 @@ set fileencodings=utf-8,cp950,big5,eucjp,gbk,euc-kr,utf-bom,iso8859-1
 set termencoding=utf-8
 set ambiwidth=double
 
+" pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 " 256 color
 set t_Co=256
 colorscheme desert256
@@ -102,5 +106,3 @@ let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 
-" pathogen
-call pathogen#runtime_append_all_bundles()
