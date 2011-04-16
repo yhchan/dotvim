@@ -4,3 +4,6 @@
 [submodule "bundle/desert256"]
 	path = bundle/desert256
 	url = https://github.com/vim-scripts/desert256.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
