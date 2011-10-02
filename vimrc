@@ -52,8 +52,6 @@ if has("autocmd")
 
 endif " has("autocmd")
 
-set directory=~/tmp/vim
-
 set nomodeline
 set enc=utf-8
 set fileencodings=utf-8,cp950,big5,eucjp,gbk,euc-kr,utf-bom,iso8859-1
