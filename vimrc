@@ -97,7 +97,7 @@ nmap <silent> <C-D> :NERDTreeToggle<CR>
 " PHP Auto Complete
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
-let php_sql_query=1                                                                                        
+let php_sql_query=1
 let php_htmlInStrings=1
 
 " Ctags
@@ -108,3 +108,5 @@ let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 
+" List
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
