@@ -108,3 +108,6 @@ map <F4> :TlistToggle<cr>
 
 " List
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+" Remove trailing space when save
+autocmd FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
