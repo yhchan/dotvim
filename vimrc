@@ -116,8 +116,4 @@ autocmd FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//
 let g:clang_use_library=1
 
 " markdown syntax settings
-au BufNewFile,BufRead *.mkd set filetype=mkd
-augroup mkd
-    autocmd BufNewFile,BufRead *.mkd set ai formatoptions=tcroqn2 comments=n:>
-    autocmd BufNewFile,BufRead *.mkd set wrap nonumber
-augroup END
+au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
