@@ -117,3 +117,6 @@ let g:clang_use_library=1
 
 " markdown syntax settings
 au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
+
+" syntastic
+let g:syntastic_check_on_open=1
