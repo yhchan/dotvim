@@ -123,8 +123,3 @@ au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
-if system('uname -s') =~ "FreeBSD"
-let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': [] }
-endif
