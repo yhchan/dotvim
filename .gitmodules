@@ -16,3 +16,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/indenthtml.vim"]
+	path = bundle/indenthtml.vim
+	url = https://github.com/vim-scripts/indenthtml.vim.git

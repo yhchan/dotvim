@@ -57,6 +57,7 @@ set enc=utf-8
 set fileencodings=utf-8,cp950,big5,eucjp,gbk,euc-kr,utf-bom,iso8859-1
 set termencoding=utf-8
 set ambiwidth=double
+set number
 
 " pathogen
 call pathogen#runtime_append_all_bundles()
@@ -82,9 +83,6 @@ highlight User4 term=underline cterm=underline ctermfg=white
 highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white
 
-" Numbers for programming files
-autocmd FileType c,h,cpp,php,hpp,java,py set number
-
 " Google C++ Style
 autocmd FileType c,h,cpp,hpp set softtabstop=2
 autocmd FileType c,h,cpp,hpp set shiftwidth=2
@@ -99,18 +97,21 @@ let php_sql_query=1
 let php_htmlInStrings=1
 
 " Ctags
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+if system('uname -s') =~ "FreeBSD"
+    map <F8> :!/usr/local/bin/exctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+else
+    map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+endif
 
 " Taglist
+if system('uname -s') =~ "FreeBSD"
 let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
+endif
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 
 " List
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-
-" Remove trailing space when save
-autocmd FileType c,cpp,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Clang Complete
 let g:clang_use_library=1
@@ -120,3 +121,10 @@ au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
 
 " syntastic
 let g:syntastic_check_on_open=1
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+if system('uname -s') =~ "FreeBSD"
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': [] }
+endif
