@@ -19,3 +19,6 @@
 [submodule "bundle/indenthtml.vim"]
 	path = bundle/indenthtml.vim
 	url = https://github.com/vim-scripts/indenthtml.vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim
