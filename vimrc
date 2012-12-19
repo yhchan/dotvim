@@ -65,10 +65,7 @@ call pathogen#helptags()
 
 " 256 color
 set t_Co=256
-colorscheme desert256
-
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+colorscheme codeschool
 
 " status
 set laststatus=2
@@ -123,3 +120,7 @@ au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+
+" python-mode
+let g:pymode_lint=0
+let g:pymode_folding=0
