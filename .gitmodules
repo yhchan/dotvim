@@ -37,3 +37,6 @@
 [submodule "bundle/codeschool-vim-theme"]
 	path = bundle/codeschool-vim-theme
 	url = https://github.com/29decibel/codeschool-vim-theme
+[submodule "bundle/as3syntax.vim"]
+	path = bundle/as3syntax.vim
+	url = https://github.com/cairo140/actionscript.vim.git

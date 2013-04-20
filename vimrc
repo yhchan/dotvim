@@ -125,3 +125,6 @@ let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 " python-mode
 let g:pymode_lint=0
 let g:pymode_folding=1
+
+" as3 syntax
+au BufRead,BufNewFile *.as set filetype=actionscript
