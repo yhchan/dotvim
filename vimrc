@@ -60,9 +60,28 @@ set ambiwidth=double
 set number
 set list
 
-" pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+
+" Vundle
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle '29decibel/codeschool-vim-theme'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'tpope/vim-markdown'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/indenthtml.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'edsono/vim-matchit'
+Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
+Bundle 'cairo140/actionscript.vim'
+
+filetype plugin indent on
 
 " 256 color
 set t_Co=256
