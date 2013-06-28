@@ -141,7 +141,7 @@ au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
-let g:syntastic_python_checker = 'flake8'
+let g:syntastic_python_checkers = ['flake8']
 
 " python-mode
 let g:pymode_lint=0
