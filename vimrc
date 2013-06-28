@@ -80,6 +80,7 @@ Bundle 'edsono/vim-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
 Bundle 'cairo140/actionscript.vim'
+Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
 
@@ -140,6 +141,7 @@ au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+let g:syntastic_python_checker = 'flake8'
 
 " python-mode
 let g:pymode_lint=0
