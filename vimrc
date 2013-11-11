@@ -79,8 +79,10 @@ Bundle 'mileszs/ack.vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'klen/python-mode'
-Bundle 'cairo140/actionscript.vim'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on
 
@@ -114,19 +116,8 @@ au FileType php set omnifunc=phpcomplete#CompletePHP
 let php_sql_query=1
 let php_htmlInStrings=1
 
-" Ctags
-if system('uname -s') =~ "FreeBSD"
-    map <F8> :!/usr/local/bin/exctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-else
-    map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-endif
-
-" Taglist
-if system('uname -s') =~ "FreeBSD"
-let Tlist_Ctags_Cmd='/usr/local/bin/exctags'
-endif
-let Tlist_WinWidth = 50
-map <F4> :TlistToggle<cr>
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
 
 " List
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
@@ -140,12 +131,13 @@ au BufNewFile,BufRead *.mkd,*.md set filetype=markdown
 " syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++ '
 let g:syntastic_python_checkers = ['flake8']
 
 " python-mode
 let g:pymode_lint=0
-let g:pymode_folding=1
+let g:pymode_folding=0
+let g:pymode_rope_vim_completion=0
 
 " as3 syntax
 au BufRead,BufNewFile *.as set filetype=actionscript
