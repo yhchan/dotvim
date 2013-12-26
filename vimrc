@@ -141,5 +141,4 @@ let g:pymode_lint=0
 let g:pymode_folding=0
 let g:pymode_rope_vim_completion=0
 
-" as3 syntax
-au BufRead,BufNewFile *.as set filetype=actionscript
+let g:airline_powerline_fonts = 0
