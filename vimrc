@@ -84,6 +84,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Rykka/riv.vim'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
