@@ -85,6 +85,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Rykka/riv.vim'
 Bundle 'bling/vim-airline'
+Bundle 'hynek/vim-python-pep8-indent'
 
 filetype plugin indent on
 
@@ -140,5 +141,6 @@ let g:syntastic_python_checkers = ['flake8']
 let g:pymode_lint=0
 let g:pymode_folding=0
 let g:pymode_rope_vim_completion=0
+let g:pymode_indent = 0
 
 let g:airline_powerline_fonts = 0
