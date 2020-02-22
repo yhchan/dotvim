@@ -62,30 +62,34 @@ set list
 
 
 " Vundle
-filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin '29decibel/codeschool-vim-theme'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'tpope/vim-markdown'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/indenthtml.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Rykka/riv.vim'
+Plugin 'bling/vim-airline'
+Plugin 'hynek/vim-python-pep8-indent'
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle '29decibel/codeschool-vim-theme'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'tpope/vim-markdown'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/indenthtml.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'edsono/vim-matchit'
-Bundle 'kien/ctrlp.vim'
-Bundle 'klen/python-mode'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Rykka/riv.vim'
-Bundle 'bling/vim-airline'
-Bundle 'hynek/vim-python-pep8-indent'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 filetype plugin indent on
 
